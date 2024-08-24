@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Remix Icon Connection -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet">
+
+    <!-- CSS Connection -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Page Title -->
+    <title>PSI&#8482; | Home</title>
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="annoucement-bar">
+        <div class="announcement-content">
+            <p>🔥 Check Out Our New Apparel At Our Store! 🔥</p>
+            <p>🚨 Checkout Our New Supplements! 🚨</p>
+            <p>💪 Join our fitness community today and get a free training plan! 💪</p>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header" id="home">
+        <nav>
+            <div class="nav-bar">
+                <div class="nav-logo">
+                    <img src="./Assets/PSI_Logo.png" alt="PSI Logo">
+                </div>
+                <div class="nav-menu-btn" id="menu-btn">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#">Supplements</a></li>
+                <li><a href="#">Apparel</a></li>
+                <li class="nav-logo"><a href="#"><img src="./Assets/PSI_Logo.png" alt="PSI Logo"></a></li>
+                <li><a href="#">Training</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Carousel Section -->
+    <section>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-slide"><img src="./Assets/psi_banner_1.png" alt="Product 1"></div>
+                <div class="carousel-slide"><img src="./Assets/psi_banner_2.jpg" alt="Product 2"></div>
+                <div class="carousel-slide"><img src="./Assets/psi_banner_3.jpg" alt="Product 3"></div>
+                <div class="carousel-slide"><img src="./Assets/psi_banner_4.jpg" alt="Product 4"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="mid-footer">
+            <div class="mid-footer-section">
+                <div class="mid-footer-column">
+                    <h1>SIGN UP FOR OUR NEWSLETTER</h1>
+                    <p>Get Notifications About Product Releases, Exclusive Content, and Much More.</p>
+                    <div class="input-container">
+                        <form id="subscriptionForm" action="https://hooks.zapier.com/hooks/catch/19697869/2484oa0/" method="POST">
+                            <input type="text" id="subscription-first-name" name="first-name" placeholder="FIRST NAME">
+                            <input type="email" id="subscription-email" name="email" placeholder="XXX@PSI.FIT" required>
+                            <button type="submit" id="subscribe-button">SUBSCRIBE</button>
+                        </form>
+                    </div>
+                    <p class="terms">I agree to receive recurring automated marketing email (e.g. cart reminders) at the email provided. View our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+                </div>
+                <div class="mid-footer-column">
+                    <h3>SHOP</h3>
+                    <ul>
+                        <li><a href="#" id="mid-footer-links">Supplements</a></li>
+                        <li><a href="#" id="mid-footer-links">Apparel & Gear</a></li>
+                        <li><a href="#" id="mid-footer-links">Training Plans</a></li>
+                    </ul>
+                </div>
+                <div class="mid-footer-column">
+                    <h3>Learn</h3>
+                    <ul>
+                        <li><a href="#" id="mid-footer-links">About</a></li>
+                        <li><a href="#" id="mid-footer-links">Take Our Quiz</a></li>
+                    </ul>
+                </div>
+                <div class="mid-footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#" id="mid-footer-links">Send Us A Message</a></li>
+                        <li><a href="#" id="mid-footer-links">FAQs</a></li>
+                        <li><a href="#" id="mid-footer-links">Return Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="social-footer">
+            <a href="#" class="social-item"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-item"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-item"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-item"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+
+        <div class="bottom-footer">
+            <p>These statements have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure or prevent any disease.</p>
+            <div class="bottom-footer-links">
+                <a href="#">TERMS & CONDITIONS</a>
+                <a href="#">PRIVACY POLICY</a>
+            </div>
+            <p id="metizen-tag">Built by <a href="https://metizen.us/" id="metizen-highlight">Metizen Developers</a></p>
+        </div>
+    </footer>
+    <!-- Javascript Connections Go Here -->
+    <script src="./javascript/header.js"></script>
+    <script src="./javascript/preventdefault.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://kit.fontawesome.com/51df57db33.js" crossorigin="anonymous"></script>
+
+    <!-- Carousel JavaScript -->
+    <script>
+        const carousel = document.querySelector('.carousel');
+        const slides = document.querySelectorAll('.carousel-slide');
+
+        let currentIndex = 0;
+
+        function updateSlideWidth() {
+            return slides[0].clientWidth;
+        }
+
+        function autoScrollCarousel() {
+            const slideWidth = updateSlideWidth();
+            currentIndex++;
+
+            if (currentIndex >= slides.length) {
+                carousel.style.transition = 'none';
+                carousel.style.transform = `translateX(0px)`;
+                currentIndex = 0;
+
+                setTimeout(() => {
+                    carousel.style.transition = 'transform 0.5s ease-in-out';
+                }, 50);
+            } else {
+                carousel.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            }
+        }
+
+        setInterval(autoScrollCarousel, 3000);
+
+        window.addEventListener('resize', () => {
+            carousel.style.transform = `translateX(-${currentIndex * updateSlideWidth()}px)`;
+        });
+    </script>
+</body>
+</html>
