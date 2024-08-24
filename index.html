@@ -61,6 +61,33 @@
         </div>
     </section>
 
+    <!-- Tile Components Go Here -->
+    <section>
+        <div class="category-section">
+            <div class="category">
+                <img src="../Assets/apparel-hero.png" alt="PSI Apparel and Gear">
+                <div class="category-content">
+                    <h2>Apparel &amp; Gear</h2>
+                    <a href="#">Shop Now</a>
+                </div>
+            </div>
+            <div class="category">
+                <img src="../Assets/supplement-hero.png" alt="PSI Supplements">
+                <div class="category-content">
+                    <h2>Supplements</h2>
+                    <a href="#">Shop Now</a>
+                </div>
+            </div>
+            <div class="category">
+                <img src="../Assets/training-hero.jpg" alt="PSI Training Plans">
+                <div class="category-content">
+                    <h2>Training</h2>
+                    <a href="#">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer Section -->
     <footer>
         <div class="mid-footer">
@@ -121,43 +148,9 @@
     </footer>
     <!-- Javascript Connections Go Here -->
     <script src="./javascript/header.js"></script>
+    <script src="./javascript/banner.js"></script>
     <script src="./javascript/preventdefault.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://kit.fontawesome.com/51df57db33.js" crossorigin="anonymous"></script>
-
-    <!-- Carousel JavaScript -->
-    <script>
-        const carousel = document.querySelector('.carousel');
-        const slides = document.querySelectorAll('.carousel-slide');
-
-        let currentIndex = 0;
-
-        function updateSlideWidth() {
-            return slides[0].clientWidth;
-        }
-
-        function autoScrollCarousel() {
-            const slideWidth = updateSlideWidth();
-            currentIndex++;
-
-            if (currentIndex >= slides.length) {
-                carousel.style.transition = 'none';
-                carousel.style.transform = `translateX(0px)`;
-                currentIndex = 0;
-
-                setTimeout(() => {
-                    carousel.style.transition = 'transform 0.5s ease-in-out';
-                }, 50);
-            } else {
-                carousel.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-            }
-        }
-
-        setInterval(autoScrollCarousel, 3000);
-
-        window.addEventListener('resize', () => {
-            carousel.style.transform = `translateX(-${currentIndex * updateSlideWidth()}px)`;
-        });
-    </script>
 </body>
 </html>
