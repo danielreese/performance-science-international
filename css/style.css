@@ -393,6 +393,8 @@ nav {
 
 .category-content h2 {
     margin: 0;
+    font-size: 1rem;
+    text-align: center;
 }
 
 .category-content a {
@@ -410,6 +412,36 @@ nav {
 .category-content a:hover {
     background: var(--white);
     color: var(--text-light);
+}
+
+/* Shop All Apparel Page Goes Here */
+.apparel-container {
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.apparel-product-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.apparel-product-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.apparel-product-header p {
+    color: #666;
+}
+
+.apparel-product-details {
+    margin-bottom: 60px;
+}
+
+.apparel-product-details h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
 /* Media Queries */
@@ -493,6 +525,12 @@ nav {
     .category-section {
         grid-template-columns: 1fr;
     }
+    .apparel-product-header h1 {
+        font-size: 2em;
+    }
+    .apparel-product-details {
+        font-size: 1.5em;
+    }
 }
 
 @media(max-width:560px) {
@@ -515,5 +553,11 @@ nav {
     }
     .carousel-slide img {
         height: 70vh; /* Further adjust image height */
+    }
+    .apparel-product-header h1 {
+        font-size: 2em;
+    }
+    .apparel-product-details {
+        font-size: 1.5em;
     }
 }
