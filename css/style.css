@@ -61,6 +61,15 @@ img {
     font-family: var(--header-font);
 }
 
+.announcement-content a {
+    color: white;
+    text-decoration: none; /* Remove the underline by default */
+}
+
+.announcement-content a:hover {
+    text-decoration: underline;
+}
+
 @keyframes scroll-left {
     from {
         transform: translateX(100%);
