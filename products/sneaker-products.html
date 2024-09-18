@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Remix Icon Connection -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet">
+
+    <!-- CSS Connection -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Page Title -->
+    <title>PSI&#8482; | Home</title>
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="annoucement-bar"> <!-- Announcement Bar -->
+        <div class="announcement-content">
+            <p><a href="./all-products.html">🔥 Check Out Our New Apparel At Our Store! 🔥</a></p>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header" id="home">
+        <nav>
+            <div class="nav-bar">
+                <div class="nav-logo">
+                    <a href="../index.html"><img src="../Assets/PSI_Logo.png" alt="PSI Logo"></a>
+                </div>
+                <div class="nav-menu-btn" id="menu-btn">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Supplements</a></li>
+                <li><a href="./all-products.html">Apparel</a></li>
+                <li class="nav-logo"><a href="./all-products.html"><img src="../Assets/PSI_Logo.png" alt="PSI Logo"></a></li>
+                <li><a href="#">Training</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Apparel Container -->
+    <div class="apparel-container">
+        <!-- Product Page Header -->
+        <header class="apparel-product-header">
+            <h1>Sneakers</h1>
+            <p>Explore our range of high-quality sneakers designed for your active lifestyle.</p>
+        </header>
+
+        <!-- Product Details Section -->
+        <section class="apparel-product-details">
+            <div id='collection-component-1726630471666'></div>
+            <script type="text/javascript">
+            /*<![CDATA[*/
+            (function () {
+            var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+            if (window.ShopifyBuy) {
+                if (window.ShopifyBuy.UI) {
+                ShopifyBuyInit();
+                } else {
+                loadScript();
+                }
+            } else {
+                loadScript();
+            }
+            function loadScript() {
+                var script = document.createElement('script');
+                script.async = true;
+                script.src = scriptURL;
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+                script.onload = ShopifyBuyInit;
+            }
+            function ShopifyBuyInit() {
+                var client = ShopifyBuy.buildClient({
+                domain: 'a59723-1f.myshopify.com',
+                storefrontAccessToken: '2a2444e202d60dca02d34f6d2285530c',
+                });
+                ShopifyBuy.UI.onReady(client).then(function (ui) {
+                ui.createComponent('collection', {
+                    id: '439254352110',
+                    node: document.getElementById('collection-component-1726630471666'),
+                    moneyFormat: '%24%7B%7Bamount%7D%7D',
+                    options: {
+            "product": {
+                "styles": {
+                "product": {
+                    "@media (min-width: 601px)": {
+                    "max-width": "calc(25% - 20px)",
+                    "margin-left": "20px",
+                    "margin-bottom": "50px",
+                    "width": "calc(25% - 20px)"
+                    }
+                },
+                    "button": {
+                        "background-color": "black",
+                        ":hover": {
+                            "background-color": "#333333"
+                        },
+                        ":focus": {
+                        "background-color": "#333333"
+                        }
+                    }
+                },
+                "buttonDestination": "modal",
+                "contents": {
+                "options": false
+                },
+                "text": {
+                "button": "View product"
+                }
+            },
+            "productSet": {
+                "styles": {
+                "products": {
+                    "@media (min-width: 601px)": {
+                    "margin-left": "-20px"
+                    }
+                }
+                }
+            },
+            "modalProduct": {
+                "contents": {
+                "img": false,
+                "imgWithCarousel": true,
+                "button": false,
+                "buttonWithQuantity": true
+                },
+                "styles": {
+                "product": {
+                    "@media (min-width: 601px)": {
+                    "max-width": "100%",
+                    "margin-left": "0px",
+                    "margin-bottom": "0px"
+                    }
+                }
+                },
+                "text": {
+                "button": "Add to cart"
+                }
+            },
+            "option": {},
+            "cart": {
+                "text": {
+                "total": "Subtotal",
+                "button": "Checkout"
+                }
+            },
+            "toggle": {}
+            },
+                });
+                });
+            }
+            })();
+            /*]]>*/
+            </script>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="mid-footer">
+            <div class="mid-footer-section">
+                <div class="mid-footer-column">
+                    <h1>SIGN UP FOR OUR NEWSLETTER</h1>
+                    <p>Get Notifications About Product Releases, Exclusive Content, and Much More.</p>
+                    <div class="input-container">
+                        <form id="subscriptionForm" action="https://hooks.zapier.com/hooks/catch/19697869/2484oa0/" method="POST">
+                            <input type="text" id="subscription-first-name" name="first-name" placeholder="FIRST NAME">
+                            <input type="email" id="subscription-email" name="email" placeholder="XXX@PSI.FIT" required>
+                            <button type="submit" id="subscribe-button">SUBSCRIBE</button>
+                        </form>
+                    </div>
+                    <p class="terms">I agree to receive recurring automated marketing email (e.g. cart reminders) at the email provided. View our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+                </div>
+                <div class="mid-footer-column">
+                    <h3>SHOP</h3>
+                    <ul>
+                        <li><a href="#" id="mid-footer-links">Supplements</a></li>
+                        <li><a href="#" id="mid-footer-links">Apparel & Gear</a></li>
+                        <li><a href="#" id="mid-footer-links">Training Plans</a></li>
+                    </ul>
+                </div>
+                <div class="mid-footer-column">
+                    <h3>Learn</h3>
+                    <ul>
+                        <li><a href="#" id="mid-footer-links">About</a></li>
+                        <li><a href="#" id="mid-footer-links">Take Our Quiz</a></li>
+                    </ul>
+                </div>
+                <div class="mid-footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#" id="mid-footer-links">Send Us A Message</a></li>
+                        <li><a href="#" id="mid-footer-links">FAQs</a></li>
+                        <li><a href="#" id="mid-footer-links">Return Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="social-footer">
+            <a href="#" class="social-item"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-item"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-item"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-item"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+
+        <div class="bottom-footer">
+            <p>These statements have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure or prevent any disease.</p>
+            <div class="bottom-footer-links">
+                <a href="#">TERMS & CONDITIONS</a>
+                <a href="#">PRIVACY POLICY</a>
+            </div>
+            <p id="metizen-tag">Built by <a href="https://metizen.us/" id="metizen-highlight">Metizen Developers</a></p>
+        </div>
+    </footer>
+    <!-- Javascript Connections Go Here -->
+    <script src="../javascript/header.js"></script>
+    <script src="../javascript/banner.js"></script>
+    <script src="../javascript/preventdefault.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://kit.fontawesome.com/51df57db33.js" crossorigin="anonymous"></script>
+</body>
+</html>
