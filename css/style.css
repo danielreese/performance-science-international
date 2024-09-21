@@ -333,10 +333,12 @@ nav {
 
 /* Banner Component CSS Goes Here */
 .carousel-container {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 80vh;
     overflow: hidden;
     position: relative;
+    padding: 0;
+    margin: 0;
 }
 
 .carousel {
@@ -349,13 +351,17 @@ nav {
 .carousel-slide {
     flex: 0 0 100%;
     height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .carousel-slide img {
     width: 100%;
-    height: 100vh;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
     display: block;
+    padding: 0;
+    margin: 0;
 }
 
 /* Tiles Component Goes Here */
@@ -526,10 +532,30 @@ nav {
         text-align: center;
     }
     .carousel-container {
-        height: 80vh; /* Adjust height for mobile screens */
+        height: 60vh; /* Adjust height for mobile screens */
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .carousel-slide {
+        flex: 0 0 100%;
+        height: 60vh; /* Adjust for smaller screens */
+        padding: 0; /* No padding */
+        margin: 0; /* No margin */
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .carousel-slide img {
-        height: 80vh; /* Adjust image height for mobile */
+        height: 100%; /* Adjust image height for mobile */
+        width: 100%;
+        object-fit: contain;
+        display: block;
+        padding: 0;
+        margin: 0;
     }
     .category-section {
         grid-template-columns: 1fr;
@@ -568,5 +594,30 @@ nav {
     }
     .apparel-product-details {
         font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-container {
+        height: 50vh; /* Further adjust for very small screens */
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .carousel-slide {
+        flex: 0 0 100%;
+        height: 50vh;
+        padding: 0;
+        margin: 0;
+    }
+
+    .carousel-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        padding: 0;
+        margin: 0;
     }
 }
