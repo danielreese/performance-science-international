@@ -334,11 +334,9 @@ nav {
 /* Banner Component CSS Goes Here */
 .carousel-container {
     width: 100%;
-    height: 80vh;
+    height: 80vh; /* Default height for large screens */
     overflow: hidden;
     position: relative;
-    padding: 0;
-    margin: 0;
 }
 
 .carousel {
@@ -351,17 +349,13 @@ nav {
 .carousel-slide {
     flex: 0 0 100%;
     height: 100%;
-    padding: 0;
-    margin: 0;
 }
 
 .carousel-slide img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover; /* Cover the container, adapt for different aspect ratios */
     display: block;
-    padding: 0;
-    margin: 0;
 }
 
 /* Tiles Component Goes Here */
@@ -496,6 +490,9 @@ nav {
 }
 
 @media(max-width:1300px) {
+    .carousel-container {
+        height: 70vh; /* Adjust the height for smaller screens */
+    }
     .mid-footer {
         text-align: center;
         font-size: 1rem;
@@ -532,13 +529,7 @@ nav {
         text-align: center;
     }
     .carousel-container {
-        height: 60vh; /* Adjust height for mobile screens */
-        padding: 0;
-        margin: 0;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        height: 60vh; /* Adjust the height for smaller mobile screens */
     }
     .carousel-slide {
         flex: 0 0 100%;
@@ -550,12 +541,7 @@ nav {
         align-items: center;
     }
     .carousel-slide img {
-        height: 100%; /* Adjust image height for mobile */
-        width: 100%;
-        object-fit: contain;
-        display: block;
-        padding: 0;
-        margin: 0;
+        object-fit: contain; /* Ensure the entire image is visible on smaller screens */
     }
     .category-section {
         grid-template-columns: 1fr;
@@ -599,10 +585,7 @@ nav {
 
 @media (max-width: 480px) {
     .carousel-container {
-        height: 50vh; /* Further adjust for very small screens */
-        padding: 0;
-        margin: 0;
-        overflow: hidden;
+        height: 50vh; /* Adjust for very small screens */
     }
 
     .carousel-slide {
@@ -613,11 +596,6 @@ nav {
     }
 
     .carousel-slide img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        display: block;
-        padding: 0;
-        margin: 0;
+        object-fit: contain; /* Ensure the image fits within the container */
     }
 }
