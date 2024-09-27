@@ -334,7 +334,7 @@ nav {
 /* Banner Component CSS Goes Here */
 .carousel-container {
     width: 100%;
-    height: 80vh; /* Default height for large screens */
+    height: 80vh; /* Set the height of the container relative to the viewport height */
     overflow: hidden;
     position: relative;
 }
@@ -352,9 +352,9 @@ nav {
 }
 
 .carousel-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cover the container, adapt for different aspect ratios */
+    width: 100%; /* Make the image width 100% of the container */
+    height: 100%; /* Ensure the image takes the full height of the container */
+    object-fit: contain; /* Ensure the image covers the entire container while maintaining its aspect ratio */
     display: block;
 }
 
@@ -453,6 +453,10 @@ nav {
     margin-bottom: 20px;
 }
 
+.mobile-banner {
+    display: none;
+}
+
 /* Media Queries */
 
 @media(width > 915px) {
@@ -528,20 +532,23 @@ nav {
         font-size: 1rem;
         text-align: center;
     }
-    .carousel-container {
-        height: 60vh; /* Adjust the height for smaller mobile screens */
+    .desktop-banner {
+        display: none; /* Hide the desktop banner */
     }
-    .carousel-slide {
-        flex: 0 0 100%;
-        height: 60vh; /* Adjust for smaller screens */
-        padding: 0; /* No padding */
-        margin: 0; /* No margin */
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .carousel-container {
+        margin-top: 120px; /* Ensure the carousel is placed below the navigation bar */
+        height: 60vh; /* Adjust the height for mobile devices */
     }
     .carousel-slide img {
-        object-fit: contain; /* Ensure the entire image is visible on smaller screens */
+        object-fit: cover; /* Ensure the image covers the entire width of the container */
+        width: 100%; /* Ensure the image spans the full width */
+        height: 100%; /* Ensure the image spans the full height */
+    }
+    .desktop-banner {
+        display: none; /* Hide the desktop banner */
+    }
+    .mobile-banner {
+        display: block; /* Show the mobile banner */
     }
     .category-section {
         grid-template-columns: 1fr;
@@ -569,11 +576,18 @@ nav {
         flex-direction: column;
         align-items: center;
     }
+    .desktop-banner {
+        display: none; /* Hide the desktop banner */
+    }
+    .mobile-banner {
+        display: block; /* Show the mobile banner */
+    }
     .carousel-container {
-        height: 70vh; /* Further adjust for smaller screens */
+        margin-top: 60px; /* Adjust this value to increase/decrease the distance */
+        height: 60vh; /* Adjust the height for smaller screens */
     }
     .carousel-slide img {
-        height: 70vh; /* Further adjust image height */
+        object-fit: contain; /* Ensure the entire image is visible on smaller screens without cropping */
     }
     .apparel-product-header h1 {
         font-size: 2em;
@@ -585,17 +599,12 @@ nav {
 
 @media (max-width: 480px) {
     .carousel-container {
-        height: 50vh; /* Adjust for very small screens */
+        margin-top: 140px; /* Increase margin-top for smaller screens */
+        height: 50vh; /* Further adjust the height for smaller screens */
     }
-
-    .carousel-slide {
-        flex: 0 0 100%;
-        height: 50vh;
-        padding: 0;
-        margin: 0;
-    }
-
     .carousel-slide img {
-        object-fit: contain; /* Ensure the image fits within the container */
+        object-fit: cover; /* Ensure the image fully covers the container */
+        width: 100%; /* Ensure the image spans the full width */
+        height: 100%; /* Ensure the image spans the full height */
     }
 }
