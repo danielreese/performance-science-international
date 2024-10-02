@@ -334,10 +334,11 @@ nav {
     color: var(--white);
 }
 
-/* Banner Component CSS Goes Here */
+/* Carousel Styles */
 .carousel-container {
+    margin-top: .7rem;
     width: 100%;
-    height: 80vh; /* Set the height of the container relative to the viewport height */
+    height: 60vh; /* Set the height of the container relative to the viewport height */
     overflow: hidden;
     position: relative;
 }
@@ -352,12 +353,11 @@ nav {
 .carousel-slide {
     flex: 0 0 100%;
     height: 100%;
+    display: block; /* Ensure all slides show on larger screens */
 }
 
 .carousel-slide img {
     width: 100%; /* Make the image width 100% of the container */
-    height: 100%; /* Ensure the image takes the full height of the container */
-    object-fit: contain; /* Ensure the image covers the entire container while maintaining its aspect ratio */
     display: block;
 }
 
@@ -497,9 +497,6 @@ nav {
 }
 
 @media(max-width:1300px) {
-    .carousel-container {
-        height: 70vh; /* Adjust the height for smaller screens */
-    }
     .mid-footer {
         text-align: center;
         font-size: 1rem;
@@ -521,6 +518,28 @@ nav {
     }
 }
 
+@media (max-width: 915px) {
+    .carousel-container {
+        margin-top: 110px; /* Adjust this value as needed to create space */
+    }
+    /* Hide the other slides for smaller screens */
+    .carousel-slide img {
+        display: none;
+    }
+    .carousel-slide:first-child img {
+        display: block;
+        content: url('../Assets/nitroforce_banner_mobile.png'); /* Use the mobile image */
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    /* Hide the second and third slides entirely */
+    .carousel-slide:nth-child(2),
+    .carousel-slide:nth-child(3) {
+        display: none;
+    }
+}
+
 @media(max-width:768px) {
     .social-footer {
         gap: 1rem;
@@ -538,24 +557,6 @@ nav {
         font-size: 1rem;
         text-align: center;
     }
-    .desktop-banner {
-        display: none; /* Hide the desktop banner */
-    }
-    .carousel-container {
-        margin-top: 120px; /* Ensure the carousel is placed below the navigation bar */
-        height: 60vh; /* Adjust the height for mobile devices */
-    }
-    .carousel-slide img {
-        object-fit: cover; /* Ensure the image covers the entire width of the container */
-        width: 100%; /* Ensure the image spans the full width */
-        height: 100%; /* Ensure the image spans the full height */
-    }
-    .desktop-banner {
-        display: none; /* Hide the desktop banner */
-    }
-    .mobile-banner {
-        display: block; /* Show the mobile banner */
-    }
     .category-section {
         grid-template-columns: 1fr;
     }
@@ -568,6 +569,25 @@ nav {
 }
 
 @media(max-width:560px) {
+    .carousel-container {
+        margin-top: 110px; /* Adjust this value as needed to create space */
+    }
+    /* Hide the other slides for smaller screens */
+    .carousel-slide img {
+        display: none;
+    }
+    .carousel-slide:first-child img {
+        display: block;
+        content: url('../Assets/nitroforce_banner_mobile.png'); /* Use the mobile image */
+        object-fit: cover;
+        width: 100%;
+        height: 95%;
+    }
+    /* Hide the second and third slides entirely */
+    .carousel-slide:nth-child(2),
+    .carousel-slide:nth-child(3) {
+        display: none;
+    }
     .social-footer {
         gap: .5rem;
     }
@@ -582,19 +602,6 @@ nav {
         flex-direction: column;
         align-items: center;
     }
-    .desktop-banner {
-        display: none; /* Hide the desktop banner */
-    }
-    .mobile-banner {
-        display: block; /* Show the mobile banner */
-    }
-    .carousel-container {
-        margin-top: 60px; /* Adjust this value to increase/decrease the distance */
-        height: 60vh; /* Adjust the height for smaller screens */
-    }
-    .carousel-slide img {
-        object-fit: contain; /* Ensure the entire image is visible on smaller screens without cropping */
-    }
     .apparel-product-header h1 {
         font-size: 2em;
     }
@@ -603,14 +610,24 @@ nav {
     }
 }
 
-@media (max-width: 480px) {
+@media(max-width:480px) {
     .carousel-container {
-        margin-top: 140px; /* Increase margin-top for smaller screens */
-        height: 50vh; /* Further adjust the height for smaller screens */
+        margin-top: 100px; /* Adjust this value as needed to create space */
     }
+    /* Hide the other slides for smaller screens */
     .carousel-slide img {
-        object-fit: cover; /* Ensure the image fully covers the container */
-        width: 100%; /* Ensure the image spans the full width */
-        height: 100%; /* Ensure the image spans the full height */
+        display: none;
+    }
+    .carousel-slide:first-child img {
+        display: block;
+        content: url('../Assets/nitroforce_banner_mobile.png'); /* Use the mobile image */
+        object-fit: fill;
+        height: 100%;
+    }
+    /* Hide the second and third slides entirely */
+    .carousel-slide:nth-child(2),
+    .carousel-slide:nth-child(3) {
+        display: none;
     }
 }
+
