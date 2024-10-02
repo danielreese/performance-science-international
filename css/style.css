@@ -267,10 +267,13 @@ nav {
 }
 
 .social-footer .social-item i {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
 }
 
+.social-footer .social-item .fa-facebook:hover { /* Youtube Hover Color */
+    color: #5890FF;
+}
 .social-footer .social-item .fa-youtube:hover { /* Youtube Hover Color */
     color: #FF0000;
 }
@@ -512,6 +515,9 @@ nav {
     }
     .category-section {
         grid-template-columns: 1fr;
+    }
+    .social-footer .social-item i {
+        font-size: 1rem;
     }
 }
 
